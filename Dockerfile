@@ -10,7 +10,7 @@ RUN curl -s "https://get.sdkman.io" | bash
 
 RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; sdk install gradle" 
 
-RUN wget "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" -o /opt/sdk.zip
+RUN wget "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" -O /opt/sdk.zip
 
 RUN unzip /opt/sdk.zip -d /opt
 
