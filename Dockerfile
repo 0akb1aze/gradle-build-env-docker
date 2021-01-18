@@ -16,6 +16,6 @@ RUN unzip /opt/sdk.zip -d /opt
 
 RUN wget https://downloads.gradle-dn.com/distributions/gradle-6.5-all.zip -O /opt/gradle-6.5-all.zip
 
-RUN /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk "sources;android-21 platform-tools ndk-bundle build-tools;21.1.2"
+RUN /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk 
 
 CMD ["touch", "/root/hello"]
