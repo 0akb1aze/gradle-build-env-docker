@@ -22,4 +22,6 @@ RUN /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk "platforms;and
 
 RUN /bin/bash -c "yes | /opt/cmdline-tools/bin/sdkmanager --licenses"
 
+RUN gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip
+
 CMD ["touch", "/root/hello"]
