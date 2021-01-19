@@ -8,6 +8,8 @@ RUN apt-get install -y zip unzip curl wget
 
 ADD ./shell/init.sh /opt/
 
+RUN chmod a+x /opt/init.sh
+
 RUN /bin/bash -c /opt/init.sh
 
 RUN wget "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" -O /opt/sdk.zip
