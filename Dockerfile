@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y openjdk-8-jdk
 
 RUN apt-get install -y zip unzip curl wget
 
-RUN curl -s "https://get.sdkman.io" | bash
+ADD ./shell/init.sh /opt/
 
-RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; sdk install gradle" 
+RUN /bin/bash -c /opt/init.sh
 
 RUN wget "https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" -O /opt/sdk.zip
 
