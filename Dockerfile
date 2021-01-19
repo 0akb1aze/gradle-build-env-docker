@@ -20,7 +20,7 @@ RUN /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk  --update
 
 RUN /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk "platforms;android-25" "build-tools;25.0.2" "extras;google;m2repository" "extras;android;m2repository"
 
-RUN /bin/bash -c "yes | /opt/cmdline-tools/bin/sdkmanager --licenses"
+RUN /bin/bash -c "yes | /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk  --licenses"
 
 RUN gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip
 
