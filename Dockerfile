@@ -17,6 +17,8 @@ RUN chmod a+x /opt/init.sh
 
 RUN /bin/bash -c /opt/init.sh
 
+WORKDIR /opt/demo_app
+
 RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip"
 
 
