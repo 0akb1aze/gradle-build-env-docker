@@ -8,11 +8,16 @@ RUN apt-get install -y zip unzip curl wget
 
 ADD ./shell/init.sh /opt/
 
+
+RUN mkdir /opt/demo_app
+
+COPY ./android-demo /opt/demo_app
+
 RUN chmod a+x /opt/init.sh
 
 RUN /bin/bash -c /opt/init.sh
 
-
+RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip"
 
 
 CMD ["touch", "/root/hello"]
