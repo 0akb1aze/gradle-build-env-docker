@@ -15,5 +15,4 @@ wget https://downloads.gradle-dn.com/distributions/gradle-6.5-all.zip -O /opt/gr
 
 yes | /opt/cmdline-tools/bin/sdkmanager --sdk_root=/opt/android_sdk  --licenses
 
-/bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip"
-
+#/bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip"
