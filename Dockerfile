@@ -22,5 +22,4 @@ WORKDIR /opt/demo_app
 RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh; gradle wrapper --gradle-distribution-url file\:/opt/gradle-6.5-all.zip"
 RUN /bin/bash -c "./gradlew assemble"
 
-
 CMD ["touch", "/root/hello"]
